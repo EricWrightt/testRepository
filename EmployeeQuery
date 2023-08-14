@@ -1,0 +1,26 @@
+Use Main_View_All
+Go
+
+
+Select Distinct
+
+vw.Employee
+,vw.Employee_Name_Full
+,vw.EmployeeEmail
+,vw.Location
+.loc.Description
+,vw.Department
+,vw.Position
+,vw.PositionDescription
+
+
+
+
+
+from dbo.vwAllCurrentEmployee_New vw (NOLOCK)
+Inner Join dbo.vwPositions p (NOLOCK) on vw.POSITION = p.POSITION
+Inner Join dbo.vwLocations loc (NOLOCK) on vw.Locations = loc.LOCATIONS
+
+Where 1=1
+And vw.Employee_Status In ('Active','Leave')
+AND vw.EMPLOYEE = 25423
