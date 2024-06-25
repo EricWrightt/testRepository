@@ -23,4 +23,3 @@ Inner Join dbo.vwLocations loc (NOLOCK) on vw.Locations = loc.LOCATIONS
 
 Where 1=1
 And vw.Employee_Status In ('Active','Leave')
-AND vw.EMPLOYEE = 25423
